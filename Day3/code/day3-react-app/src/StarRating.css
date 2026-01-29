@@ -1,0 +1,132 @@
+.star-rating-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.star {
+  font-size: 60px;
+  cursor: pointer;
+  color: #ffd700;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.star:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.star.filled {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+.star.empty {
+  color: rgba(255, 215, 0, 0.3);
+}
+
+.rating-display {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.feedback-message {
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.rating-text {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.rating-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.reset-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+.size-small .stars {
+  gap: 8px;
+}
+
+.size-small .star {
+  font-size: 30px;
+}
+
+.size-medium .stars {
+  gap: 15px;
+}
+
+.size-medium .star {
+  font-size: 60px;
+}
+
+.size-large .stars {
+  gap: 20px;
+}
+
+.size-large .star {
+  font-size: 80px;
+}
+
+@media (max-width: 600px) {
+  .star-rating-container {
+    padding: 20px;
+  }
+
+  .stars {
+    gap: 10px;
+  }
+
+  .star {
+    font-size: 40px;
+  }
+
+  .rating-text {
+    font-size: 16px;
+  }
+
+  .rating-number {
+    font-size: 24px;
+  }
+}

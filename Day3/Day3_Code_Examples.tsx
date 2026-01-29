@@ -5,6 +5,56 @@
 // ========================================
 
 // ===============================
+// KEY TECHNIQUES & HINTS
+// ===============================
+
+/*
+TECHNIQUE 1: Unicode Stars
+  ★ = Filled star (just text!)
+  ☆ = Empty star (just text!)
+  
+  Use: <span>★</span>
+
+TECHNIQUE 2: Creating Multiple Elements with Array.map
+  Array.from({ length: 5 }).map((_, index) => (
+    <span key={index}>★</span>
+  ))
+  
+  The 'index' tells you which star (0-4).
+
+TECHNIQUE 3: Two State Variables
+  const [rating, setRating] = useState(0);          // What user selected
+  const [hoverRating, setHoverRating] = useState(0); // What user is hovering
+  
+  WHY? When hovering, show PREVIEW without SAVING.
+
+TECHNIQUE 4: Deciding Filled vs Empty
+  if ((index + 1) <= currentRating) {
+    show ★ (filled)
+  } else {
+    show ☆ (empty)
+  }
+
+TECHNIQUE 5: Event Handlers
+  onClick → handleStarClick
+  onMouseEnter → handleStarHover
+  onMouseLeave → handleLeave
+
+TECHNIQUE 6: Which Rating to Display
+  const displayRating = hoverRating || rating;
+  
+  Shows hover preview when hovering, actual rating otherwise.
+
+TECHNIQUE 7: CSS Classes for Styling
+  Give elements className so you can style them in CSS.
+
+TECHNIQUE 8: Conditional Rendering
+  {rating > 0 && <button>Reset</button>}
+  
+  Only show button when rating is set.
+*/
+
+// ===============================
 // FILE 1: src/components/StarRating.tsx
 // Main Star Rating Component
 // ===============================
