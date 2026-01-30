@@ -16,12 +16,7 @@ function App(): JSX.Element {
       </header>
 
       <main>
-        <StarRating
-          maxStars={5}
-          size="medium"
-          onRatingChange={handleRatingChange}
-          color="#ffd700"
-        />
+        <StarRating onRatingChange={handleRatingChange} />
       </main>
     </div>
   );

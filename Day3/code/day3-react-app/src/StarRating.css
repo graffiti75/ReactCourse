@@ -25,12 +25,13 @@
 
 .star:hover {
   transform: scale(1.2);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
 }
 
 .star.filled {
   color: #ffd700;
   text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+  animation: fillStar 0.3s ease;
 }
 
 .star.empty {
@@ -41,7 +42,7 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 8px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 .feedback-message {
@@ -128,5 +129,19 @@
 
   .rating-number {
     font-size: 24px;
+  }
+}
+
+@keyframes fillStar {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
