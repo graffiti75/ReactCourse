@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 10px;
+  background: linear-gradient(135deg, #feeeef 0%, #effffe 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
