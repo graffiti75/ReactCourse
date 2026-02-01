@@ -1,11 +1,23 @@
-import "./App.css";
+import "./CardFooter.css";
 
 interface CardFooterProps {
-  children: React.ReactNode;
+  onButtonClick?: () => void;
+  buttonText?: string;
 }
 
-const CardFooter = ({ children }: CardFooterProps) => {
-  return <div className="card-footer">{children}</div>;
+const CardFooter = ({
+  onButtonClick,
+  buttonText = "Learn More",
+}: CardFooterProps) => {
+  return (
+    <div className="card-footer">
+      {onButtonClick && (
+        <button onClick={onButtonClick} className="card-button">
+          {buttonText}
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default CardFooter;

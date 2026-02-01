@@ -1,14 +1,16 @@
-import "./App.css";
+import "./CardBody.css";
 
 interface CardBodyProps {
-  children: React.ReactNode;
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
-const CardBody = ({ children }: CardBodyProps) => {
+const CardBody = ({ title, description, imageUrl }: CardBodyProps) => {
   return (
     <div className="card-body">
-      <p>Card Body</p>
-      {children}
+      <img src={imageUrl} alt={title} className="card-image" />
+      <p>{description}</p>
     </div>
   );
 };

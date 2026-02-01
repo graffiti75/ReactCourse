@@ -1,13 +1,17 @@
 .card-header {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 15px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
 }
 
 .card-header h2 {
+  flex: 1;
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
+  color: #333;
 }
 
 .close-button {
