@@ -13,10 +13,6 @@ interface CardProps {
   variant?: "default" | "success" | "danger"; // Optional: card style
 }
 
-const handleClick = (): void => {
-  console.log("Card button clicked!");
-};
-
 const Card = ({
   title,
   description,
@@ -29,7 +25,7 @@ const Card = ({
     <div className={`card card-${variant}`}>
       <CardHeader title={title} closeButton={true} />
       <CardBody title={title} description={description} imageUrl={imageUrl} />
-      <CardFooter onButtonClick={handleClick} />
+      <CardFooter onButtonClick={onButtonClick} />
     </div>
   );
 };
